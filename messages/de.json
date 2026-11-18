@@ -26,7 +26,8 @@
       "description": "Ein kulinarisches Erlebnis, wo Natur auf französische Lebensart trifft.",
       "ctaMenu": "Speisekarte entdecken",
       "ctaReservation": "Tisch reservieren",
-      "scrollIndicator": "Scrollen"
+      "scrollIndicator": "Das Restaurant entdecken",
+      "imageAlt": "Der Gastraum von Les Botanistes mit gedeckten Tischen und einer Sitzbank in warmem Licht."
     },
     "philosophy": {
       "subtitle": "Unsere Philosophie",

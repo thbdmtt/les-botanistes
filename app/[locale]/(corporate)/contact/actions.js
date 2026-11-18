@@ -1,6 +1,7 @@
 'use server'
 
 import { Resend } from 'resend'
+import { siteConfig } from '@/lib/config'
 import { headers } from 'next/headers'
 
 // Rate limiting - stockage en mémoire des tentatives par IP
@@ -144,16 +145,16 @@ export async function sendContactEmail(prevState, formData) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Helvetica Neue', Arial, sans-serif;">
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f5f5f5; padding: 40px 20px;">
+    <body style="margin: 0; padding: 0; background-color: #F8F5EE; font-family: 'Helvetica Neue', Arial, sans-serif;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F8F5EE; padding: 40px 20px;">
         <tr>
           <td align="center">
             <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
 
               <!-- Header -->
               <tr>
-                <td style="background-color: #0B0B0C; padding: 30px 40px; text-align: center;">
-                  <h1 style="margin: 0; color: #C9A227; font-family: Georgia, serif; font-size: 28px; font-weight: normal;">
+                <td style="background-color: #252A24; padding: 30px 40px; text-align: center;">
+                  <h1 style="margin: 0; color: #E0CBA6; font-family: Georgia, serif; font-size: 28px; font-weight: normal;">
                     Les Botanistes
                   </h1>
                   <p style="margin: 8px 0 0 0; color: #888888; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;">
@@ -165,7 +166,7 @@ export async function sendContactEmail(prevState, formData) {
               <!-- Title -->
               <tr>
                 <td style="padding: 40px 40px 20px 40px; border-bottom: 1px solid #eee;">
-                  <h2 style="margin: 0; color: #0B0B0C; font-family: Georgia, serif; font-size: 24px; font-weight: normal;">
+                  <h2 style="margin: 0; color: #252A24; font-family: Georgia, serif; font-size: 24px; font-weight: normal;">
                     Nouveau message de contact
                   </h2>
                   <p style="margin: 10px 0 0 0; color: #666666; font-size: 14px;">
@@ -181,25 +182,25 @@ export async function sendContactEmail(prevState, formData) {
                     <tr>
                       <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                         <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Nom complet</span>
-                        <p style="margin: 5px 0 0 0; color: #0B0B0C; font-size: 16px; font-weight: 500;">${firstName} ${lastName}</p>
+                        <p style="margin: 5px 0 0 0; color: #252A24; font-size: 16px; font-weight: 500;">${firstName} ${lastName}</p>
                       </td>
                     </tr>
                     <tr>
                       <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                         <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</span>
-                        <p style="margin: 5px 0 0 0;"><a href="mailto:${email}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${email}</a></p>
+                        <p style="margin: 5px 0 0 0;"><a href="mailto:${email}" style="color: #806035; font-size: 16px; text-decoration: none;">${email}</a></p>
                       </td>
                     </tr>
                     <tr>
                       <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                         <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Téléphone</span>
-                        <p style="margin: 5px 0 0 0;"><a href="tel:${phone}" style="color: #C9A227; font-size: 16px; text-decoration: none;">${phone}</a></p>
+                        <p style="margin: 5px 0 0 0;"><a href="tel:${phone}" style="color: #806035; font-size: 16px; text-decoration: none;">${phone}</a></p>
                       </td>
                     </tr>
                     <tr>
                       <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                         <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Sujet</span>
-                        <p style="margin: 5px 0 0 0; color: #0B0B0C; font-size: 16px;">${subject || 'Non spécifié'}</p>
+                        <p style="margin: 5px 0 0 0; color: #252A24; font-size: 16px;">${subject || 'Non spécifié'}</p>
                       </td>
                     </tr>
                   </table>
@@ -209,7 +210,7 @@ export async function sendContactEmail(prevState, formData) {
               <!-- Message -->
               <tr>
                 <td style="padding: 0 40px 30px 40px;">
-                  <div style="background-color: #fafafa; border-left: 3px solid #C9A227; padding: 20px; border-radius: 0 4px 4px 0;">
+                  <div style="background-color: #F8F5EE; border-left: 3px solid #806035; padding: 20px; border-radius: 0 4px 4px 0;">
                     <span style="color: #999999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Message</span>
                     <p style="margin: 10px 0 0 0; color: #333333; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message}</p>
                   </div>
@@ -219,7 +220,7 @@ export async function sendContactEmail(prevState, formData) {
               <!-- Action Button -->
               <tr>
                 <td style="padding: 0 40px 40px 40px;">
-                  <a href="mailto:${email}?subject=Re: ${subject || 'Votre message'}" style="display: inline-block; background-color: #C9A227; color: #ffffff; padding: 14px 28px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 4px;">
+                  <a href="mailto:${email}?subject=Re: ${subject || 'Votre message'}" style="display: inline-block; background-color: #806035; color: #ffffff; padding: 14px 28px; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 4px;">
                     Répondre à ${firstName}
                   </a>
                 </td>
@@ -227,12 +228,12 @@ export async function sendContactEmail(prevState, formData) {
 
               <!-- Footer -->
               <tr>
-                <td style="background-color: #fafafa; padding: 25px 40px; text-align: center; border-top: 1px solid #eee;">
+                <td style="background-color: #F8F5EE; padding: 25px 40px; text-align: center; border-top: 1px solid #eee;">
                   <p style="margin: 0; color: #999999; font-size: 12px;">
                     Ce message a été envoyé depuis le formulaire de contact du site
                   </p>
                   <p style="margin: 5px 0 0 0;">
-                    <a href="https://les-botanistes.fr" style="color: #C9A227; font-size: 12px; text-decoration: none;">les-botanistes.fr</a>
+                    <a href="${siteConfig.url}" style="color: #806035; font-size: 12px; text-decoration: none;">${new URL(siteConfig.url).hostname}</a>
                   </p>
                 </td>
               </tr>

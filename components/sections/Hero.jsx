@@ -1,91 +1,58 @@
 'use client'
 
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui'
+import { siteConfig } from '@/lib/config'
 
 export default function Hero() {
   const t = useTranslations('home.hero')
+  const { address } = siteConfig.restaurant
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Image de fond avec effet parallaxe subtil */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/images/hero-restaurant.jpg')`,
-        }}
-      >
-        {/* Fallback gradient si pas d'image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-noir via-gris-fonce to-noir" />
-      </div>
+    <section className="pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
+      <div className="container-luxe grid lg:grid-cols-2 items-center gap-10 lg:gap-16">
+        <div className="max-w-xl">
+          <p className="subtitle text-xs sm:text-sm mb-5">{t('subtitle')}</p>
+          <h1 className="font-serif text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.12] mb-6">
+            {t('title')}{' '}
+            <span className="block text-gold italic">{t('titleHighlight')}</span>
+          </h1>
+          <div className="separator-gold mb-7" />
+          <p className="body-luxe max-w-md mb-8">{t('description')}</p>
 
-      {/* Overlay dégradé élégant */}
-      <div className="absolute inset-0 bg-gradient-to-b from-noir/70 via-noir/50 to-noir/90" />
-
-      {/* Overlay doré subtil */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-gold/10 mix-blend-overlay" />
-
-      {/* Contenu principal */}
-      <div className="relative z-10 container-luxe text-center px-4">
-        {/* Sous-titre */}
-        <p
-          className="subtitle text-blanc/90 mb-6 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
-        >
-          {t('subtitle')}
-        </p>
-
-        {/* Titre principal */}
-        <h1
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-blanc mb-6 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
-        >
-          {t('title')}{' '}
-          <span className="text-gold italic">{t('titleHighlight')}</span>
-        </h1>
-
-        {/* Séparateur décoratif */}
-        <div
-          className="flex items-center justify-center gap-4 mb-8 opacity-0 animate-fade-in"
-          style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}
-        >
-          <span className="h-px w-12 bg-gradient-to-r from-transparent to-gold" />
-          <span className="w-2 h-2 rotate-45 border border-gold" />
-          <span className="h-px w-12 bg-gradient-to-l from-transparent to-gold" />
-        </div>
-
-        {/* Description */}
-        <p
-          className="max-w-xl mx-auto text-lg sm:text-xl text-gris-chaud font-light leading-relaxed mb-10 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
-        >
-          {t('description')}
-        </p>
-
-        {/* Boutons CTA */}
-        <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 opacity-0 animate-fade-in-up"
-          style={{ animationDelay: '900ms', animationFillMode: 'forwards' }}
-        >
-          <Button href="/carte" variant="primary">
-            {t('ctaMenu')}
-          </Button>
-          <Button href="/reservation" variant="secondary" className="border-blanc/50 text-blanc hover:bg-blanc hover:text-noir hover:border-blanc">
-            {t('ctaReservation')}
-          </Button>
-        </div>
-      </div>
-
-      {/* Indicateur de scroll */}
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in"
-        style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}
-      >
-        <div className="flex flex-col items-center gap-2 text-blanc/60">
-          <span className="text-xs uppercase tracking-widest">{t('scrollIndicator')}</span>
-          <div className="w-6 h-10 border border-blanc/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-gold rounded-full animate-bounce" />
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <Button href="/reservation" className="w-full sm:w-auto">
+              {t('ctaReservation')}
+            </Button>
+            <Button href="/carte" variant="secondary" className="w-full sm:w-auto">
+              {t('ctaMenu')}
+            </Button>
           </div>
+
+          <a href="#notre-maison" className="inline-flex items-center gap-3 mt-8 text-sm text-muted-foreground hover:text-gold">
+            {t('scrollIndicator')}
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
+
+        <figure className="min-w-0">
+          <div className="relative aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-t-[5rem] sm:rounded-t-[8rem] border border-border bg-muted">
+            <Image
+              src="/images/privatisation/espace-privatisable.jpg"
+              alt={t('imageAlt')}
+              fill
+              priority
+              quality={85}
+              sizes="(min-width: 1280px) 1008px, (min-width: 1024px) 80vw, (min-width: 640px) 90vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+          <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-muted-foreground">
+            <span>{address.street}</span>
+            <span>{address.postalCode} {address.city}</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
   )

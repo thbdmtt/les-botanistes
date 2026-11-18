@@ -73,7 +73,7 @@ export default function ContactPage() {
                     href="https://www.google.com/maps/place/Les+Botanistes/@48.8520828,2.3231111,16z/data=!3m1!4b1!4m6!3m5!1s0x47e671d4722c7127:0x8141796c1a3a77db!8m2!3d48.8520793!4d2.325686!16s%2Fg%2F1tfb1992?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-3 text-sm text-gold hover:text-gold-light transition-colors"
+                    className="inline-block mt-3 text-sm text-gold hover:text-gold-dark transition-colors"
                   >
                     {t('info.viewOnMap')} →
                   </a>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   >
                     {siteConfig.restaurant.phone}
                   </a>
-                  <p className="mt-1 text-sm text-muted-foreground/70">
+                  <p className="mt-1 text-sm text-muted-foreground">
                     {t('info.phoneHours')}
                   </p>
                 </div>
@@ -104,15 +104,15 @@ export default function ContactPage() {
                 <div className="flex-shrink-0 w-12 h-12 border border-gold/30 rounded-full flex items-center justify-center">
                   <MailIcon className="w-5 h-5 text-gold" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-serif text-lg mb-2">{t('info.email')}</h3>
                   <a
                     href={`mailto:${siteConfig.restaurant.email}`}
-                    className="text-muted-foreground hover:text-gold transition-colors"
+                    className="break-words text-muted-foreground hover:text-gold transition-colors"
                   >
                     {siteConfig.restaurant.email}
                   </a>
-                  <p className="mt-1 text-sm text-muted-foreground/70">
+                  <p className="mt-1 text-sm text-muted-foreground">
                     {t('info.responseTime')}
                   </p>
                 </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                       <span>{t('hours.dinner')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.dinner}</span>
                     </div>
-                    <p className="pt-2 text-sm text-gold/80">
+                    <p className="pt-2 text-sm text-gold">
                       {t('hours.closed')} {siteConfig.restaurant.hours.closed}
                     </p>
                   </div>
@@ -161,7 +161,7 @@ export default function ContactPage() {
             <p className="text-muted-foreground">
               {siteConfig.restaurant.address.street}
             </p>
-            <p className="text-sm text-muted-foreground/70">
+            <p className="text-sm text-muted-foreground">
               {siteConfig.restaurant.address.postalCode} {siteConfig.restaurant.address.city}
             </p>
             <a
@@ -177,10 +177,10 @@ export default function ContactPage() {
       </section>
 
       {/* Accès */}
-      <section className="section-padding bg-noir text-blanc">
+      <section className="section-dark section-padding">
         <div className="container-luxe">
           <div className="text-center mb-12">
-            <p className="subtitle text-gold/80 mb-4">{t('access.subtitle')}</p>
+            <p className="subtitle text-gold-light mb-4">{t('access.subtitle')}</p>
             <h2 className="font-serif text-2xl sm:text-3xl">{t('access.title')}</h2>
           </div>
 
@@ -188,7 +188,7 @@ export default function ContactPage() {
             {/* Métro */}
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
-                <span className="text-gold font-bold text-sm">M</span>
+                <span className="text-gold-light font-bold text-sm">M</span>
               </div>
               <h3 className="font-medium mb-2">{t('access.metro.title')}</h3>
               <p className="text-sm text-gris-chaud whitespace-pre-line">
@@ -199,7 +199,7 @@ export default function ContactPage() {
             {/* Bus */}
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
-                <span className="text-gold font-bold text-sm">Bus</span>
+                <span className="text-gold-light font-bold text-sm">Bus</span>
               </div>
               <h3 className="font-medium mb-2">{t('access.bus.title')}</h3>
               <p className="text-sm text-gris-chaud whitespace-pre-line">
@@ -210,7 +210,7 @@ export default function ContactPage() {
             {/* Parking */}
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 border border-gris-fonce rounded-full flex items-center justify-center">
-                <span className="text-gold font-bold text-sm">P</span>
+                <span className="text-gold-light font-bold text-sm">P</span>
               </div>
               <h3 className="font-medium mb-2">{t('access.parking.title')}</h3>
               <p className="text-sm text-gris-chaud whitespace-pre-line">

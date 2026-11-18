@@ -26,7 +26,8 @@
       "description": "Une expérience culinaire où la nature rencontre l'art de vivre à la française.",
       "ctaMenu": "Découvrir la carte",
       "ctaReservation": "Réserver une table",
-      "scrollIndicator": "Scroll"
+      "scrollIndicator": "Découvrir le restaurant",
+      "imageAlt": "La salle du restaurant Les Botanistes, ses tables dressées et sa banquette dans une lumière chaleureuse."
     },
     "philosophy": {
       "subtitle": "Notre Philosophie",

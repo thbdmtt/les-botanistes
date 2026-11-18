@@ -5,7 +5,6 @@ import { Link, usePathname } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 import { siteConfig } from '@/lib/config'
 import Logo from '@/components/ui/Logo'
-import ThemeToggle from '@/components/ui/ThemeToggle'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
 
 export default function Header() {
@@ -44,11 +43,11 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50',
+          'fixed top-0 left-0 right-0 z-50 border-b border-border/50 text-foreground',
           'transition-all duration-500 ease-out',
           isScrolled
-            ? 'py-3 glass border-b border-border/50'
-            : 'py-5 bg-transparent'
+            ? 'py-3 glass'
+            : 'py-5 bg-background'
         )}
       >
         <div className="container-luxe">
@@ -69,6 +68,7 @@ export default function Header() {
                         ? 'text-gold'
                         : 'text-foreground'
                     )}
+                    aria-current={pathname === item.href ? 'page' : undefined}
                   >
                     {item.name}
                     {/* Indicateur actif */}
@@ -84,9 +84,6 @@ export default function Header() {
             <div className="flex items-center gap-4">
               {/* Language Switcher */}
               <LanguageSwitcher />
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
 
               {/* Bouton réservation desktop */}
               <Link
@@ -105,6 +102,7 @@ export default function Header() {
                 )}
                 aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
                 aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-navigation"
               >
                 <div className="w-6 h-5 relative flex flex-col justify-between">
                   <span
@@ -134,6 +132,8 @@ export default function Header() {
 
       {/* Menu mobile overlay */}
       <div
+        id="mobile-navigation"
+        inert={isMobileMenuOpen ? undefined : ''}
         className={cn(
           'fixed inset-0 z-40 md:hidden',
           'transition-all duration-500',

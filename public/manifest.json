@@ -4,21 +4,15 @@
   "description": "Restaurant de cuisine traditionnelle française Paris 7, près du Bon Marché. Cuisine française de saison.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0B0B0C",
-  "theme_color": "#C9A227",
+  "background_color": "#F8F5EE",
+  "theme_color": "#F8F5EE",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

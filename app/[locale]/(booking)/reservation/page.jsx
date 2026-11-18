@@ -43,7 +43,7 @@ export default function ReservationPage() {
                       <span>{t('info.hours.dinner')}</span>
                       <span className="text-foreground">{siteConfig.restaurant.hours.dinner}</span>
                     </p>
-                    <p className="text-sm text-gold/80 mt-2">
+                    <p className="text-sm text-gold mt-2">
                       {t('info.hours.closed')} {siteConfig.restaurant.hours.closed}
                     </p>
                   </div>
@@ -115,13 +115,13 @@ export default function ReservationPage() {
       </section>
 
       {/* Section Privatisation */}
-      <section className="section-padding bg-noir text-blanc">
+      <section className="section-dark section-padding">
         <div className="container-luxe">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Texte */}
             <div>
-              <p className="subtitle text-gold/80 mb-4">{t('privatisation.subtitle')}</p>
+              <p className="subtitle text-gold-light mb-4">{t('privatisation.subtitle')}</p>
               <h2 className="font-serif text-3xl sm:text-4xl mb-6">
                 {t('privatisation.title')}
               </h2>
@@ -130,19 +130,19 @@ export default function ReservationPage() {
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3 text-gris-chaud">
-                  <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-gold-light rounded-full" />
                   {t('privatisation.features.capacity')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
-                  <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-gold-light rounded-full" />
                   {t('privatisation.features.menu')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
-                  <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-gold-light rounded-full" />
                   {t('privatisation.features.service')}
                 </li>
                 <li className="flex items-center gap-3 text-gris-chaud">
-                  <span className="w-1.5 h-1.5 bg-gold rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-gold-light rounded-full" />
                   {t('privatisation.features.decoration')}
                 </li>
               </ul>
@@ -154,34 +154,20 @@ export default function ReservationPage() {
               </a>
             </div>
 
-            {/* Image d'ambiance */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gris-fonce to-noir rounded-sm overflow-hidden">
-                {/* Image */}
-                <Image
-                  src="/images/privatisation/espace-privatisable.jpg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Overlay sombre */}
-                <div className="absolute inset-0 bg-black/75" />
-                {/* Contenu */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 border border-gold/30 rounded-full flex items-center justify-center">
-                      <svg className="w-10 h-10 text-gold/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m18-6-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 10.5" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-gris-chaud/80 uppercase tracking-widest">
-                      {t('privatisation.imageLabel')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Photographie de la salle, visible sans voile opaque. */}
+            <figure className="relative aspect-[4/3] overflow-hidden rounded-sm border border-blanc/15">
+              <Image
+                src="/images/privatisation/espace-privatisable.jpg"
+                alt={t('privatisation.title')}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-noir/80 via-transparent to-transparent" />
+              <figcaption className="absolute bottom-6 inset-x-6 text-sm text-blanc uppercase tracking-widest">
+                {t('privatisation.imageLabel')}
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

@@ -28,6 +28,14 @@ npm run dev
 
 Le projet nécessite des variables d’environnement pour Google Sheets et Resend. Aucune valeur sensible ne doit être ajoutée au dépôt.
 
+## Identité visuelle
+
+Le site utilise une palette claire fixe : ivoire `#F8F5EE`, bronze `#806035` pour les textes et les actions, et champagne `#E0CBA6` sur les sections foncées. Les couleurs partagées sont définies dans `tailwind.config.js`.
+
+La photographie de la salle est utilisée à l’accueil et pour la privatisation. Inter et Playfair Display sont hébergées localement au format WOFF2 ; leurs licences sont conservées dans `public/fonts/`.
+
+L’URL publique par défaut est `https://les-botanistes.vercel.app`. La variable `NEXT_PUBLIC_SITE_URL` permet de la remplacer lorsqu’un domaine personnalisé est raccordé.
+
 ## Statut
 
 Prototype public destiné à démontrer une approche complète : identité visuelle, expérience mobile, contenu administrable et visibilité locale.

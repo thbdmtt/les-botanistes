@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
-export default function Logo({ className, showTagline = false }) {
+export default function Logo({ className, showTagline = false, inverted = false }) {
   return (
     <Link
       href="/"
@@ -11,9 +11,9 @@ export default function Logo({ className, showTagline = false }) {
       )}
     >
       {/* Nom du restaurant */}
-      <span className="font-serif text-xl sm:text-2xl tracking-wide text-foreground">
+      <span className={cn('font-serif text-xl sm:text-2xl tracking-wide', inverted ? 'text-blanc' : 'text-foreground')}>
         Les{' '}
-        <span className="text-gold">Botanistes</span>
+        <span className={inverted ? 'text-gold-light' : 'text-gold'}>Botanistes</span>
       </span>
 
       {/* Tagline optionnelle */}

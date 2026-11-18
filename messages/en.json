@@ -26,7 +26,8 @@
       "description": "A culinary experience where nature meets the French art of living.",
       "ctaMenu": "Discover the menu",
       "ctaReservation": "Book a table",
-      "scrollIndicator": "Scroll"
+      "scrollIndicator": "Discover the restaurant",
+      "imageAlt": "The dining room at Les Botanistes, with set tables and a banquette in warm light."
     },
     "philosophy": {
       "subtitle": "Our Philosophy",

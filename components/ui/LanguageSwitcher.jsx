@@ -75,6 +75,7 @@ export default function LanguageSwitcher() {
 
       {/* Dropdown */}
       <div
+        inert={isOpen ? undefined : ''}
         className={cn(
           'absolute top-full right-0 mt-2 py-1.5',
           'min-w-[140px] rounded-sm',

@@ -149,9 +149,9 @@ export default function MenuContent({ sections, tastingMenus }: MenuContentProps
       )}
 
       {/* CTA Réservation */}
-      <section className="section-padding bg-noir text-blanc text-center">
+      <section className="section-dark section-padding text-center">
         <div className="container-narrow">
-          <p className="subtitle text-gold/80 mb-4">{t('cta.subtitle')}</p>
+          <p className="subtitle text-gold-light mb-4">{t('cta.subtitle')}</p>
           <h2 className="font-serif text-2xl sm:text-3xl mb-6">
             {t('cta.title')}
           </h2>

@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Politique de confidentialité du restaurant Les Botanistes. Informations sur la collecte et le traitement de vos données personnelles.',
   robots: { index: false, follow: true },
   alternates: {
-    canonical: 'https://les-botanistes.fr/confidentialite',
+    canonical: `${siteConfig.url}/confidentialite`,
   },
 }
 
@@ -14,7 +14,7 @@ function Section({ title, children }) {
   return (
     <section className="mb-12">
       <h2 className="font-serif text-xl sm:text-2xl text-gold mb-4">{title}</h2>
-      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground space-y-4">
+      <div className="prose prose-neutral max-w-none text-muted-foreground space-y-4">
         {children}
       </div>
     </section>

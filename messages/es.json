@@ -26,7 +26,8 @@
       "description": "Una experiencia culinaria donde la naturaleza se encuentra con el arte de vivir a la francesa.",
       "ctaMenu": "Descubrir la carta",
       "ctaReservation": "Reservar una mesa",
-      "scrollIndicator": "Scroll"
+      "scrollIndicator": "Descubrir el restaurante",
+      "imageAlt": "El comedor de Les Botanistes, con sus mesas preparadas y su banqueta en una luz cálida."
     },
     "philosophy": {
       "subtitle": "Nuestra Filosofía",

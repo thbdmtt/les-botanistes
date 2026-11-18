@@ -59,7 +59,7 @@ export default function ContactForm() {
               id="firstName"
               name="firstName"
               required
-              className="w-full px-4 py-3 bg-background border border-border rounded-sm
+              className="w-full px-4 py-3 bg-background border border-input rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
               placeholder={t('placeholders.firstName')}
             />
@@ -73,7 +73,7 @@ export default function ContactForm() {
               id="lastName"
               name="lastName"
               required
-              className="w-full px-4 py-3 bg-background border border-border rounded-sm
+              className="w-full px-4 py-3 bg-background border border-input rounded-sm
                        focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
               placeholder={t('placeholders.lastName')}
             />
@@ -89,7 +89,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
-            className="w-full px-4 py-3 bg-background border border-border rounded-sm
+            className="w-full px-4 py-3 bg-background border border-input rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             placeholder={t('placeholders.email')}
           />
@@ -105,7 +105,7 @@ export default function ContactForm() {
             name="phone"
             required
             aria-required="true"
-            className="w-full px-4 py-3 bg-background border border-border rounded-sm
+            className="w-full px-4 py-3 bg-background border border-input rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
             placeholder={t('placeholders.phone')}
           />
@@ -119,7 +119,7 @@ export default function ContactForm() {
             id="subject"
             name="subject"
             required
-            className="w-full px-4 py-3 bg-background border border-border rounded-sm
+            className="w-full px-4 py-3 bg-background border border-input rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
           >
             <option value="">{t('subjects.select')}</option>
@@ -140,7 +140,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            className="w-full px-4 py-3 bg-background border border-border rounded-sm
+            className="w-full px-4 py-3 bg-background border border-input rounded-sm
                      focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none"
             placeholder={t('placeholders.message')}
           />

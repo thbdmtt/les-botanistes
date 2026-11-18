@@ -26,7 +26,8 @@
       "description": "自然とフランスの生活美学が出会う、特別な美食体験。",
       "ctaMenu": "メニューを見る",
       "ctaReservation": "テーブルを予約",
-      "scrollIndicator": "スクロール"
+      "scrollIndicator": "レストランをご紹介",
+      "imageAlt": "温かな光に包まれたレ・ボタニストの店内。テーブルとベンチシートが並びます。"
     },
     "philosophy": {
       "subtitle": "私たちの哲学",

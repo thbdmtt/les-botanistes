@@ -27,14 +27,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-noir text-blanc">
+    <footer className="section-dark">
       {/* Section principale */}
       <div className="container-luxe section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
           {/* Colonne 1 : Logo et description */}
           <div className="lg:col-span-1">
-            <Logo className="text-blanc [&_span]:text-blanc [&_.text-gold]:text-gold" />
+            <Logo inverted />
             <p className="mt-4 text-sm text-gris-chaud leading-relaxed">
               Cuisine traditionnelle française au cœur du 7ème arrondissement.
             </p>
@@ -45,7 +45,7 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-gris-fonce rounded-full transition-all duration-300 hover:border-gold hover:text-gold"
+                className="w-10 h-10 flex items-center justify-center border border-gris-fonce rounded-full transition-all duration-300 hover:border-gold hover:text-gold-light"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -54,7 +54,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-gris-fonce rounded-full transition-all duration-300 hover:border-gold hover:text-gold"
+                className="w-10 h-10 flex items-center justify-center border border-gris-fonce rounded-full transition-all duration-300 hover:border-gold hover:text-gold-light"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -64,7 +64,7 @@ export default function Footer() {
 
           {/* Colonne 2 : Navigation */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest text-gold mb-6">
+            <h3 className="text-sm uppercase tracking-widest text-gold-light mb-6">
               Navigation
             </h3>
             <ul className="space-y-3">
@@ -72,7 +72,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-gris-chaud transition-colors duration-300 hover:text-gold"
+                    className="text-sm text-gris-chaud transition-colors duration-300 hover:text-gold-light"
                   >
                     {item.name}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Colonne 3 : Contact */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest text-gold mb-6">
+            <h3 className="text-sm uppercase tracking-widest text-gold-light mb-6">
               Contact
             </h3>
             <address className="not-italic space-y-3 text-sm text-gris-chaud">
@@ -94,7 +94,7 @@ export default function Footer() {
               <p>
                 <a
                   href={`tel:${siteConfig.restaurant.phone}`}
-                  className="transition-colors duration-300 hover:text-gold"
+                  className="transition-colors duration-300 hover:text-gold-light"
                 >
                   {siteConfig.restaurant.phone}
                 </a>
@@ -102,7 +102,7 @@ export default function Footer() {
               <p>
                 <a
                   href={`mailto:${siteConfig.restaurant.email}`}
-                  className="transition-colors duration-300 hover:text-gold"
+                  className="transition-colors duration-300 hover:text-gold-light"
                 >
                   {siteConfig.restaurant.email}
                 </a>
@@ -112,7 +112,7 @@ export default function Footer() {
 
           {/* Colonne 4 : Horaires */}
           <div>
-            <h3 className="text-sm uppercase tracking-widest text-gold mb-6">
+            <h3 className="text-sm uppercase tracking-widest text-gold-light mb-6">
               Horaires
             </h3>
             <div className="space-y-3 text-sm text-gris-chaud">
@@ -124,7 +124,7 @@ export default function Footer() {
                 <span className="text-blanc">Dîner</span><br />
                 {siteConfig.restaurant.hours.dinner}
               </p>
-              <p className="text-gold/80">
+              <p className="text-gold-light">
                 Fermé {siteConfig.restaurant.hours.closed}
               </p>
             </div>
@@ -148,7 +148,7 @@ export default function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition-colors duration-300 hover:text-gold"
+                className="transition-colors duration-300 hover:text-gold-light"
               >
                 {item.name}
               </Link>

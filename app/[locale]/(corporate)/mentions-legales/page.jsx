@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { PageHeader } from '@/components/sections'
+import { siteConfig } from '@/lib/config'
 
 // Données légales statiques de la société
 const LEGAL_DATA = {
@@ -29,7 +30,7 @@ function Section({ title, children }) {
   return (
     <section className="mb-12">
       <h2 className="font-serif text-xl sm:text-2xl text-gold mb-4">{title}</h2>
-      <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground space-y-4">
+      <div className="prose prose-neutral max-w-none text-muted-foreground space-y-4">
         {children}
       </div>
     </section>
@@ -51,7 +52,7 @@ export default function MentionsLegalesPage() {
 
           <Section title={t('sections.editor.title')}>
             <p>
-              {t('sections.editor.intro')} <strong>les-botanistes.fr</strong>
+              {t('sections.editor.intro')} <strong>{new URL(siteConfig.url).hostname}</strong>
             </p>
             <p>
               <strong>{LEGAL_DATA.company.name}</strong><br />

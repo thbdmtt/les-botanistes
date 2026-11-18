@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,27 +8,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: '#F8F5EE',
+        foreground: '#28251F',
         gold: {
-          DEFAULT: '#C5A572',
-          light: '#D4BC91',
-          dark: '#A68B5B',
+          DEFAULT: '#806035',
+          light: '#E0CBA6',
+          dark: '#634922',
         },
         muted: {
-          DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)',
+          DEFAULT: '#EEE7DC',
+          foreground: '#686052',
         },
-        border: 'var(--border)',
+        border: '#DED5C7',
+        input: '#8F816D',
         card: {
-          DEFAULT: 'var(--card)',
-          foreground: 'var(--card-foreground)',
+          DEFAULT: '#FFFCF7',
+          foreground: '#28251F',
         },
-        noir: '#0B0B0C',
-        blanc: '#FAFAFA',
+        noir: '#252A24',
+        blanc: '#F8F5EE',
         gris: {
-          chaud: '#D6D3CE',
-          fonce: '#1A1A1B',
+          chaud: '#E5DDCF',
+          fonce: '#42483E',
         },
       },
       fontFamily: {
@@ -123,14 +123,14 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-gold': 'linear-gradient(135deg, #A68B5B 0%, #C5A572 50%, #D4BC91 100%)',
-        'shimmer-gold': 'linear-gradient(90deg, transparent, rgba(197, 165, 114, 0.3), transparent)',
+        'gradient-gold': 'linear-gradient(135deg, #634922 0%, #806035 50%, #E0CBA6 100%)',
+        'shimmer-gold': 'linear-gradient(90deg, transparent, rgba(128, 96, 53, 0.3), transparent)',
       },
       boxShadow: {
         'luxe': '0 4px 20px -2px rgba(0, 0, 0, 0.1)',
         'luxe-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.15)',
-        'gold': '0 4px 20px -2px rgba(197, 165, 114, 0.25)',
-        'gold-lg': '0 10px 40px -10px rgba(197, 165, 114, 0.35)',
+        'gold': '0 4px 20px -2px rgba(128, 96, 53, 0.15)',
+        'gold-lg': '0 10px 40px -10px rgba(128, 96, 53, 0.2)',
       },
       borderRadius: {
         '4xl': '2rem',

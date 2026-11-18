@@ -1,4 +1,6 @@
-const BASE_URL = 'https://les-botanistes.fr'
+import { siteConfig } from '@/lib/config'
+
+const BASE_URL = siteConfig.url
 
 export default function robots() {
   return {

@@ -26,7 +26,8 @@
       "description": "Un'esperienza culinaria dove la natura incontra l'arte di vivere alla francese.",
       "ctaMenu": "Scopri il menu",
       "ctaReservation": "Prenota un tavolo",
-      "scrollIndicator": "Scroll"
+      "scrollIndicator": "Scopri il ristorante",
+      "imageAlt": "La sala del ristorante Les Botanistes, con i tavoli apparecchiati e la panca in una luce calda."
     },
     "philosophy": {
       "subtitle": "La Nostra Filosofia",

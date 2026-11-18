@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
 
       {/* Section Philosophie */}
-      <section className="section-padding bg-background">
+      <section id="notre-maison" className="section-padding bg-background border-t border-border">
         <div className="container-narrow text-center">
           <FadeIn>
             <p className="subtitle mb-6">{t('philosophy.subtitle')}</p>
@@ -114,14 +114,10 @@ export default function Home() {
       </section>
 
       {/* Section CTA Réservation */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        {/* Fond */}
-        <div className="absolute inset-0 bg-noir" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5" />
-
-        <div className="relative container-narrow text-center">
+      <section className="section-dark section-padding">
+        <div className="container-narrow text-center">
           <FadeIn>
-            <p className="subtitle text-gold/80 mb-4">{t('cta.subtitle')}</p>
+            <p className="subtitle text-gold-light mb-4">{t('cta.subtitle')}</p>
           </FadeIn>
           <FadeIn delay={100}>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-blanc mb-6 text-balance">

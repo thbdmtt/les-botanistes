@@ -1,16 +1,16 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { ThemeProvider } from '@/components/ThemeProvider'
 import { Header, Footer } from '@/components/layout'
 import { RestaurantJsonLd, WebSiteJsonLd } from '@/lib/jsonld'
-import { locales, localeNames } from '@/i18n/routing'
+import { locales } from '@/i18n/routing'
+import { siteConfig } from '@/lib/config'
 
 // Génération des métadonnées dynamiques basées sur la locale
 export async function generateMetadata({ params: { locale } }) {
   const t = await getTranslations({ locale, namespace: 'seo' })
 
-  const siteUrl = 'https://les-botanistes.fr'
+  const siteUrl = siteConfig.url
 
   return {
     metadataBase: new URL(siteUrl),
@@ -38,13 +38,13 @@ export async function generateMetadata({ params: { locale } }) {
       siteName: 'Les Botanistes',
       title: t('home.title'),
       description: t('home.description'),
-      images: ['/og-default.jpg'],
+      images: ['/images/privatisation/espace-privatisable.jpg'],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('home.title'),
       description: t('home.description'),
-      images: ['/og-default.jpg'],
+      images: ['/images/privatisation/espace-privatisable.jpg'],
     },
     alternates: {
       canonical: locale === 'fr' ? siteUrl : `${siteUrl}/${locale}`,
@@ -74,18 +74,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-// Script pour éviter le flash de thème au chargement
-const themeScript = `
-  (function() {
-    function getTheme() {
-      const stored = localStorage.getItem('theme');
-      if (stored && stored !== 'system') return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    document.documentElement.classList.add(getTheme());
-  })();
-`
-
 export default async function LocaleLayout({ children, params: { locale } }) {
   // Vérifier que la locale est supportée
   if (!locales.includes(locale)) {
@@ -96,24 +84,22 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <RestaurantJsonLd />
         <WebSiteJsonLd />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/playfair.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider defaultTheme="system">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </ThemeProvider>
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
