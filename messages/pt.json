@@ -8,7 +8,8 @@
     "backToHome": "Voltar ao início",
     "loading": "Carregando...",
     "error": "Ocorreu um erro",
-    "success": "Sucesso"
+    "success": "Sucesso",
+    "skipToContent": "Saltar para o conteúdo"
   },
   "navigation": {
     "home": "Início",
@@ -260,7 +261,8 @@
         "lastName": "O seu apelido",
         "email": "seu@email.com",
         "phone": "+33 6 00 00 00 00"
-      }
+      },
+      "openWidget": "Abrir numa nova janela"
     },
     "privatisation": {
       "subtitle": "Eventos privados",
@@ -381,5 +383,25 @@
       }
     },
     "lastUpdate": "Última atualização:"
+  },
+  "newYear": {
+    "title": "Passagem de ano no Les Botanistes",
+    "heading": "O último jantar",
+    "headingHighlight": "do ano",
+    "teaser": "Um menu de festa, do foie gras ao chocolate, para receber o novo ano.",
+    "description": "Descubra o menu de passagem de ano do Les Botanistes por {price} €, bebidas não incluídas. Reserve por telefone.",
+    "introduction": "Celebre a passagem de ano com um menu que reúne clássicos franceses e sabores da estação.",
+    "menuTitle": "Menu de passagem de ano",
+    "priceNote": "Bebidas não incluídas",
+    "viewMenu": "Descobrir o menu",
+    "backToMenu": "Carta do restaurante",
+    "bookingLabel": "A sua noite",
+    "bookingTitle": "Uma mesa para 31 de dezembro",
+    "bookingDescription": "Para reservar este jantar, ligue diretamente à nossa equipa. Teremos também todo o gosto em responder às suas perguntas sobre o menu.",
+    "otherDates": "Para outra data",
+    "onlineBooking": "Reservar online",
+    "pastTitle": "Uma recordação de festa",
+    "pastDescription": "Este menu foi servido em 31 de dezembro de 2026. Descubra a carta atual ou reserve a sua próxima visita.",
+    "callToBook": "Ligar para reservar"
   }
 }

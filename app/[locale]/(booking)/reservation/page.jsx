@@ -1,13 +1,14 @@
-'use client'
-
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { PageHeader } from '@/components/sections'
 import { siteConfig } from '@/lib/config'
 import ReservationForm from '@/components/ReservationForm'
+import NewYearAnnouncement from '@/components/sections/NewYearAnnouncement'
 
-export default function ReservationPage() {
-  const t = useTranslations('reservation')
+export const revalidate = 3600
+
+export default async function ReservationPage() {
+  const t = await getTranslations('reservation')
 
   return (
     <>
@@ -16,6 +17,7 @@ export default function ReservationPage() {
         title={t('header.title')}
         description={t('header.description')}
       />
+      <NewYearAnnouncement compact />
 
       {/* Section principale de réservation */}
       <section className="pb-16 sm:pb-20">
@@ -23,7 +25,7 @@ export default function ReservationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
             {/* Colonne gauche : Informations */}
-            <div>
+            <div className="min-w-0">
               <h2 className="font-serif text-2xl sm:text-3xl mb-6">
                 {t('info.title')} <span className="text-gold">{t('info.titleHighlight')}</span>
               </h2>
@@ -107,7 +109,7 @@ export default function ReservationPage() {
             </div>
 
             {/* Colonne droite : Formulaire / CTA */}
-            <div>
+            <div className="order-first lg:order-last min-w-0" id="reservation-en-ligne">
               <ReservationForm />
             </div>
           </div>

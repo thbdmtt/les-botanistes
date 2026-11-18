@@ -2,7 +2,7 @@
 
 Prototype fonctionnel d’un site vitrine multilingue pour **Les Botanistes**, restaurant de cuisine française à Paris.
 
-[Voir le site](https://les-botanistes.vercel.app)
+[Voir le site](https://www.lesbotanistes.com)
 
 ## Intention
 
@@ -34,7 +34,15 @@ Le site utilise une palette claire fixe : ivoire `#F8F5EE`, bronze `#806035` pou
 
 La photographie de la salle est utilisée à l’accueil et pour la privatisation. Inter et Playfair Display sont hébergées localement au format WOFF2 ; leurs licences sont conservées dans `public/fonts/`.
 
-L’URL publique par défaut est `https://les-botanistes.vercel.app`. La variable `NEXT_PUBLIC_SITE_URL` permet de la remplacer lorsqu’un domaine personnalisé est raccordé.
+L’URL canonique par défaut est `https://www.lesbotanistes.com`. La variable `NEXT_PUBLIC_SITE_URL` permet de la remplacer si nécessaire.
+
+## Réveillon du 31 décembre 2026
+
+Le menu de fête est présenté sur `/reveillon-2026`, avec un accès depuis l’accueil, la carte et la réservation. Son contenu bilingue, sa date et son tarif de 135 € hors boissons sont centralisés dans `data/new-year-menu.js`. La réservation de ce dîner se fait par téléphone, conformément au document du restaurant.
+
+La promotion saisonnière et les liens du sitemap sont retirés après minuit à Paris le 1er janvier 2027, au prochain renouvellement du cache (au plus une heure). La page du menu reste consultable avec une mention d’archive et sans invitation à réserver ce dîner.
+
+Le cadre du module TheFork suit les couleurs du site. Les couleurs à l’intérieur de son iframe se règlent dans le Design Kit de TheFork Manager ; voir `docs/2026-11-18-web-et-reveillon.md`.
 
 ## Statut
 

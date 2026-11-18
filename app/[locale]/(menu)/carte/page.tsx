@@ -3,6 +3,9 @@ import { loadAllSections, getMenuLabel } from '@/lib/menu'
 import type { MenuItemData, SectionId } from '@/lib/menu'
 import { MenuJsonLd } from '@/lib/jsonld'
 import MenuContent from './MenuContent'
+import NewYearAnnouncement from '@/components/sections/NewYearAnnouncement'
+
+export const revalidate = 3600
 
 // Tasting menus data (static, not from Google Sheets)
 const tastingMenus = [
@@ -77,6 +80,7 @@ export default async function CartePage() {
       <MenuContent
         sections={sections}
         tastingMenus={tastingMenus}
+        announcement={<NewYearAnnouncement compact />}
       />
     </>
   )

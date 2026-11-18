@@ -22,6 +22,12 @@ export function useInView({
     const element = ref.current
     if (!element) return
 
+    // Content remains readable when motion is disabled or observation unavailable.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      setIsInView(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

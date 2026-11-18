@@ -44,7 +44,7 @@ export default function Hero() {
               fill
               priority
               quality={85}
-              sizes="(min-width: 1280px) 1008px, (min-width: 1024px) 80vw, (min-width: 640px) 90vw, 100vw"
+              sizes="(min-width: 1280px) 576px, (min-width: 1024px) calc(50vw - 4rem), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
               className="object-cover object-center"
             />
           </div>

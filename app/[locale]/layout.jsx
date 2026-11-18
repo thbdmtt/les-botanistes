@@ -82,6 +82,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   // Charger les messages pour cette locale
   const messages = await getMessages()
+  const common = await getTranslations('common')
 
   return (
     <html lang={locale}>
@@ -95,12 +96,14 @@ export default async function LocaleLayout({ children, params: { locale } }) {
       </head>
       <body className="font-sans min-h-screen flex flex-col bg-background text-foreground antialiased">
         <NextIntlClientProvider messages={messages}>
+          <a href="#main-content" className="skip-link">{common('skipToContent')}</a>
           <Header />
-          <main className="flex-1">
+          <main id="main-content" tabIndex={-1} className="flex-1">
             {children}
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <noscript><style>{'.reveal-on-scroll { opacity: 1 !important; transform: none !important; }'}</style></noscript>
       </body>
     </html>
   )

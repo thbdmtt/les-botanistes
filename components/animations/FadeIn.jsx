@@ -40,7 +40,7 @@ export function FadeIn({
   return (
     <Component
       ref={ref}
-      className={`${!isInView ? directionStyles[direction] : ''} ${className}`}
+      className={`reveal-on-scroll ${!isInView ? directionStyles[direction] : ''} ${className}`}
       style={baseStyles}
     >
       {children}

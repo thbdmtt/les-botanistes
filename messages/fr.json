@@ -8,7 +8,8 @@
     "backToHome": "Retour à l'accueil",
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
-    "success": "Succès"
+    "success": "Succès",
+    "skipToContent": "Aller au contenu"
   },
   "navigation": {
     "home": "Accueil",
@@ -260,7 +261,8 @@
         "lastName": "Votre nom",
         "email": "votre@email.com",
         "phone": "+33 6 00 00 00 00"
-      }
+      },
+      "openWidget": "Ouvrir dans une nouvelle fenêtre"
     },
     "privatisation": {
       "subtitle": "Événements privés",
@@ -381,5 +383,25 @@
       }
     },
     "lastUpdate": "Dernière mise à jour :"
+  },
+  "newYear": {
+    "title": "Le réveillon aux Botanistes",
+    "heading": "Le dernier dîner",
+    "headingHighlight": "de l’année",
+    "teaser": "Un menu de fête, du foie gras au chocolat, pour célébrer le passage à la nouvelle année.",
+    "description": "Découvrez le menu du réveillon des Botanistes à {price} € hors boissons. Réservation par téléphone.",
+    "introduction": "Pour le réveillon, la maison vous accueille autour d’un menu de fête, entre grands classiques et saveurs de saison.",
+    "menuTitle": "Menu du réveillon",
+    "priceNote": "Hors boissons",
+    "viewMenu": "Découvrir le menu",
+    "backToMenu": "La carte du restaurant",
+    "bookingLabel": "Votre soirée",
+    "bookingTitle": "Une table pour le 31 décembre",
+    "bookingDescription": "Pour réserver ce dîner, contactez directement notre équipe par téléphone. Nous répondrons aussi à vos questions sur le menu.",
+    "otherDates": "Pour une autre date",
+    "onlineBooking": "Réserver en ligne",
+    "pastTitle": "Un souvenir de fête",
+    "pastDescription": "Ce menu était proposé le 31 décembre 2026. Retrouvez notre carte actuelle ou réservez pour une prochaine visite.",
+    "callToBook": "Appeler pour réserver"
   }
 }

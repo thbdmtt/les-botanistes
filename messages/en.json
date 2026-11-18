@@ -8,7 +8,8 @@
     "backToHome": "Back to home",
     "loading": "Loading...",
     "error": "An error occurred",
-    "success": "Success"
+    "success": "Success",
+    "skipToContent": "Skip to content"
   },
   "navigation": {
     "home": "Home",
@@ -260,7 +261,8 @@
         "lastName": "Your last name",
         "email": "your@email.com",
         "phone": "+33 6 00 00 00 00"
-      }
+      },
+      "openWidget": "Open in a new window"
     },
     "privatisation": {
       "subtitle": "Private events",
@@ -381,5 +383,25 @@
       }
     },
     "lastUpdate": "Last updated:"
+  },
+  "newYear": {
+    "title": "New Year’s Eve at Les Botanistes",
+    "heading": "The last dinner",
+    "headingHighlight": "of the year",
+    "teaser": "A festive menu, from foie gras to chocolate, to welcome the new year.",
+    "description": "Discover the New Year’s Eve menu at Les Botanistes for €{price}, drinks excluded. Book by phone.",
+    "introduction": "Celebrate New Year’s Eve with a festive menu bringing together French classics and seasonal flavours.",
+    "menuTitle": "New Year’s Eve menu",
+    "priceNote": "Drinks excluded",
+    "viewMenu": "Discover the menu",
+    "backToMenu": "Restaurant menu",
+    "bookingLabel": "Your evening",
+    "bookingTitle": "A table for 31 December",
+    "bookingDescription": "To book this dinner, please call our team directly. We will also be happy to answer your questions about the menu.",
+    "otherDates": "For another date",
+    "onlineBooking": "Book online",
+    "pastTitle": "A festive memory",
+    "pastDescription": "This menu was served on 31 December 2026. Discover our current menu or book your next visit.",
+    "callToBook": "Call to book"
   }
 }

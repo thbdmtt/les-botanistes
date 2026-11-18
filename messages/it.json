@@ -8,7 +8,8 @@
     "backToHome": "Torna alla home",
     "loading": "Caricamento...",
     "error": "Si è verificato un errore",
-    "success": "Successo"
+    "success": "Successo",
+    "skipToContent": "Vai al contenuto"
   },
   "navigation": {
     "home": "Home",
@@ -260,7 +261,8 @@
         "lastName": "Il vostro cognome",
         "email": "vostra@email.com",
         "phone": "+33 6 00 00 00 00"
-      }
+      },
+      "openWidget": "Aprire in una nuova finestra"
     },
     "privatisation": {
       "subtitle": "Eventi privati",
@@ -381,5 +383,25 @@
       }
     },
     "lastUpdate": "Ultimo aggiornamento:"
+  },
+  "newYear": {
+    "title": "Capodanno a Les Botanistes",
+    "heading": "L’ultima cena",
+    "headingHighlight": "dell’anno",
+    "teaser": "Un menu di festa, dal foie gras al cioccolato, per accogliere il nuovo anno.",
+    "description": "Scoprite il menu di Capodanno di Les Botanistes a {price} €, bevande escluse. Prenotazioni telefoniche.",
+    "introduction": "Festeggiate la sera di San Silvestro con un menu che unisce i classici francesi e i sapori di stagione.",
+    "menuTitle": "Menu di San Silvestro",
+    "priceNote": "Bevande escluse",
+    "viewMenu": "Scoprire il menu",
+    "backToMenu": "La carta del ristorante",
+    "bookingLabel": "La vostra serata",
+    "bookingTitle": "Un tavolo per il 31 dicembre",
+    "bookingDescription": "Per prenotare questa cena, chiamate direttamente il nostro team. Risponderemo anche alle vostre domande sul menu.",
+    "otherDates": "Per un’altra data",
+    "onlineBooking": "Prenotare online",
+    "pastTitle": "Un ricordo di festa",
+    "pastDescription": "Questo menu è stato servito il 31 dicembre 2026. Scoprite la carta attuale o prenotate la prossima visita.",
+    "callToBook": "Chiama per prenotare"
   }
 }

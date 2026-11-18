@@ -1,15 +1,17 @@
-'use client'
-
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/routing'
 import { Hero } from '@/components/sections'
 import { FadeIn } from '@/components/animations'
+import NewYearAnnouncement from '@/components/sections/NewYearAnnouncement'
 
-export default function Home() {
-  const t = useTranslations('home')
+export const revalidate = 3600
+
+export default async function Home() {
+  const t = await getTranslations('home')
   return (
     <>
       <Hero />
+      <NewYearAnnouncement />
 
       {/* Section Philosophie */}
       <section id="notre-maison" className="section-padding bg-background border-t border-border">

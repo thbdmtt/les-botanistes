@@ -1,4 +1,8 @@
 import { siteConfig } from '@/lib/config'
+import { isNewYearMenuUpcoming, newYearMenu } from '@/data/new-year-menu'
+import { locales } from '@/i18n/routing'
+
+export const revalidate = 3600
 
 const BASE_URL = siteConfig.url
 
@@ -17,10 +21,21 @@ const routes = [
 export default function sitemap() {
   const currentDate = new Date().toISOString()
 
-  return routes.map((route) => ({
+  const entries = routes.map((route) => ({
     url: `${BASE_URL}${route.path}`,
     lastModified: currentDate,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }))
+
+  if (isNewYearMenuUpcoming()) {
+    entries.push(...locales.map((locale) => ({
+      url: `${BASE_URL}${locale === 'fr' ? '' : `/${locale}`}${newYearMenu.path}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })))
+  }
+
+  return entries
 }

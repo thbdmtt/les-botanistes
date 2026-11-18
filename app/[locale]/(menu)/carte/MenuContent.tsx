@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import type { ReactNode } from 'react'
 import { Link } from '@/i18n/routing'
 import { PageHeader } from '@/components/sections'
 import { MenuItem, Separator } from '@/components/ui'
@@ -65,6 +66,7 @@ interface TastingMenu {
 }
 
 interface MenuContentProps {
+  announcement?: ReactNode
   sections: {
     starters: LocalizedMenuItem[]
     mains: LocalizedMenuItem[]
@@ -73,7 +75,7 @@ interface MenuContentProps {
   tastingMenus: TastingMenu[]
 }
 
-export default function MenuContent({ sections, tastingMenus }: MenuContentProps) {
+export default function MenuContent({ sections, tastingMenus, announcement }: MenuContentProps) {
   const t = useTranslations('menu')
 
   // Define section order
@@ -87,6 +89,8 @@ export default function MenuContent({ sections, tastingMenus }: MenuContentProps
         description={t('header.description')}
         className={undefined}
       />
+
+      {announcement}
 
       {/* Note du chef */}
       <section className="pb-8">

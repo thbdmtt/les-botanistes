@@ -8,7 +8,8 @@
     "backToHome": "Volver al inicio",
     "loading": "Cargando...",
     "error": "Ha ocurrido un error",
-    "success": "Éxito"
+    "success": "Éxito",
+    "skipToContent": "Ir al contenido"
   },
   "navigation": {
     "home": "Inicio",
@@ -260,7 +261,8 @@
         "lastName": "Su apellido",
         "email": "su@email.com",
         "phone": "+33 6 00 00 00 00"
-      }
+      },
+      "openWidget": "Abrir en una ventana nueva"
     },
     "privatisation": {
       "subtitle": "Eventos privados",
@@ -381,5 +383,25 @@
       }
     },
     "lastUpdate": "Última actualización:"
+  },
+  "newYear": {
+    "title": "Nochevieja en Les Botanistes",
+    "heading": "La última cena",
+    "headingHighlight": "del año",
+    "teaser": "Un menú de fiesta, del foie gras al chocolate, para recibir el nuevo año.",
+    "description": "Descubra el menú de Nochevieja de Les Botanistes por {price} €, bebidas no incluidas. Reserve por teléfono.",
+    "introduction": "Celebre Nochevieja con un menú que combina los clásicos franceses y los sabores de temporada.",
+    "menuTitle": "Menú de Nochevieja",
+    "priceNote": "Bebidas no incluidas",
+    "viewMenu": "Descubrir el menú",
+    "backToMenu": "Carta del restaurante",
+    "bookingLabel": "Su velada",
+    "bookingTitle": "Una mesa para el 31 de diciembre",
+    "bookingDescription": "Para reservar esta cena, llame directamente a nuestro equipo. También responderemos a sus preguntas sobre el menú.",
+    "otherDates": "Para otra fecha",
+    "onlineBooking": "Reservar en línea",
+    "pastTitle": "Un recuerdo de fiesta",
+    "pastDescription": "Este menú se sirvió el 31 de diciembre de 2026. Descubra nuestra carta actual o reserve su próxima visita.",
+    "callToBook": "Llamar para reservar"
   }
 }
