@@ -44,7 +44,9 @@ export default function Hero() {
               fill
               priority
               quality={85}
-              sizes="(min-width: 1280px) 576px, (min-width: 1024px) calc(50vw - 4rem), (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+              // The 976×700 source is cropped with object-cover: account for
+              // its ~1.4 ratio, especially inside the desktop 4:5 portrait.
+              sizes="(min-width: 1280px) 1008px, (min-width: 1024px) calc(87.5vw - 7rem), (min-width: 640px) calc(105vw - 3.15rem), calc(105vw - 2.1rem)"
               className="object-cover object-center"
             />
           </div>
